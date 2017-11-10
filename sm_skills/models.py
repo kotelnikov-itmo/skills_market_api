@@ -9,6 +9,9 @@ class Skill(models.Model):
     class Meta:
         db_table = 'Skills'
 
+    def __str__(self):
+        return self.name
+
 
 class SkillHistory(models.Model):
     SOURCES = (
@@ -19,7 +22,10 @@ class SkillHistory(models.Model):
 
     skill = models.ForeignKey('Skill')
     employee = models.ForeignKey('sm_employees.Employee')
-    source_type = models.CharField(max_length=2)
+    source_type = models.CharField(max_length=2, choices=SOURCES)
+
+    def __str__(self):
+        return self.skill.name + "=" + self.employee.name
 
     class Meta:
         db_table = 'SkillHistory'

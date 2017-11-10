@@ -15,12 +15,22 @@ class Employee(models.Model):
     class Meta:
         db_table = 'Employees'
 
+    @property
+    def full_name(self):
+        return "%s %s %s" % (self.name, self.surname, self.middlename)
+
+    def __str__(self):
+        return self.full_name
+
 
 class Position(models.Model):
     name = models.CharField(max_length=100)
 
     class Meta:
         db_table = 'Positions'
+
+    def __str__(self):
+        return self.name
 
 
 class PositionHistory(models.Model):
