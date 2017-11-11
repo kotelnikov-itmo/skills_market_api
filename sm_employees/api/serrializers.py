@@ -1,6 +1,13 @@
 from rest_framework.serializers import ModelSerializer, StringRelatedField
 
-from sm_employees.models import Employee
+from sm_employees.models import Employee, Position
+
+
+class PositionSerializer(ModelSerializer):
+
+    class Meta:
+        model = Position
+        fields = ['name', ]
 
 
 class EmployeeSerializer(ModelSerializer):

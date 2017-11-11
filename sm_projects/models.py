@@ -6,7 +6,7 @@ from django.db import models
 class Project(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
-    start_date = models.DateField(auto_created=True)
+    start_date = models.DateField(auto_now_add=True, blank=True)
     end_date = models.DateField(null=True)
 
     class Meta:
@@ -21,7 +21,7 @@ class Assignment(models.Model):
     employee = models.ForeignKey('sm_employees.Employee', null=True, blank=True)
     description = models.TextField()
     position = models.ForeignKey('sm_employees.Position')
-    start_date = models.DateField(auto_created=True)
+    start_date = models.DateField(auto_now_add=True, blank=True)
     # end_date = models.DateField()
     need_skills = models.ManyToManyField("sm_skills.Skill", db_table='AssignmentsSkills')
 
