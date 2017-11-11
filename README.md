@@ -2,7 +2,7 @@
 
 ## Skills
 
-| ----- | ------ | --- |
+
 | title | method | url |
 | ----- | ------ | --- |
 | all | `GET` | /api/skills/ |
@@ -21,7 +21,7 @@ Model:
 
 ## Projects
 
-| ----- | ------ | --- |
+
 | title | method | url |
 | ----- | ------ | --- |
 | all | `GET` | /api/projects/ |
