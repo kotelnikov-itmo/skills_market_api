@@ -12,11 +12,11 @@
 
 Model:
 
-'''
+```
 {
     name: "string"
 }
-'''
+```
 
 
 ## Projects
@@ -32,7 +32,7 @@ Model:
 
 Model:
 
-'''
+```
 {
     "name": "string",
     "description": "text",
@@ -49,4 +49,25 @@ Model:
         }
     ]
 }
-'''
+```
+
+## Employees
+
+| title | method | url |
+| ----- | ------ | --- |
+| all | `GET` | /api/employees/ |
+| detail | `GET` | /api/employees/<id>/ |
+
+Model:
+
+```
+{
+    "name": "string",
+    "surname": "string",
+    "middlename": "string",
+    "recruited_date": "YYYY-MM-DD",
+    "skills": [
+        "string",
+    ]
+}
+```
