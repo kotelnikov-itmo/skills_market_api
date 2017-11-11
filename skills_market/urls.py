@@ -19,11 +19,17 @@ from rest_framework.routers import DefaultRouter
 from sm_projects.api.viewset import ProjectViewSet
 from sm_employees.api.viewset import EmployeeViewSet
 from sm_skills.api.viewset import SkillsViewSet
+from sm_search.api.view import SearchProxy
 
 api_router = DefaultRouter()
 api_router.register('projects', ProjectViewSet)
 api_router.register('employees', EmployeeViewSet)
 api_router.register('skills', SkillsViewSet)
+
+api_urls = api_router.urls
+api_urls.append(
+    url(r'^search/', SearchProxy.as_view())
+)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

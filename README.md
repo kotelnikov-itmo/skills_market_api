@@ -73,3 +73,12 @@ Model:
     ]
 }
 ```
+
+## Search Proxy
+
+url: /api/search/
+method: `GET`
+params:
+
+ - type
+ - param
