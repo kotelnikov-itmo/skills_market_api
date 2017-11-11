@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Skill(models.Model):
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=250, unique=True)
 
     class Meta:
         db_table = 'Skills'
