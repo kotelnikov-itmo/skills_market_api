@@ -24,7 +24,7 @@ class ProjectSerializer(ModelSerializer):
     class Meta:
         model = Project
         fields = [
-            'id', 'name', 'description', 'start_date', 'assignment_set'
+            'id', 'name', 'description', 'start_date', 'assignment_set', 'end_date'
         ]
 
     def create(self, validated_data):
