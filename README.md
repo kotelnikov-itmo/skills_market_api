@@ -34,9 +34,11 @@ Model:
 
 ```
 {
+    "id": integer
     "name": "string",
     "description": "text",
     "start_date": "YYYY-MM-DD",
+    "end_date": "YYYY-MM-DD",
     "assignment_set": [
         {
             "employee": null | <Employee>,

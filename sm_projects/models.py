@@ -7,7 +7,7 @@ class Project(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     start_date = models.DateField(auto_created=True)
-    # end_date = models.DateField()
+    end_date = models.DateField(null=True)
 
     class Meta:
         db_table = 'Projects'

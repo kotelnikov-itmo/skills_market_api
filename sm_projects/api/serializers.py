@@ -20,8 +20,9 @@ class ProjectSerializer(ModelSerializer):
     class Meta:
         model = Project
         fields = [
-            'name', 'description', 'start_date', 'assignment_set'
+            'id', 'name', 'description', 'start_date', 'assignment_set'
         ]
+
 
 class AssignmentEmployeeSerializer(ModelSerializer):
     class Meta:
